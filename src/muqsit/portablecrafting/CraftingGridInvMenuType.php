@@ -30,8 +30,7 @@ final class CraftingGridInvMenuType implements InvMenuType{
 
 	public function createGraphic(InvMenu $menu, Player $player) : ?InvMenuGraphic{
 		$inner = $this->inner->createGraphic($menu, $player);
-		assert($inner instanceof PositionedInvMenuGraphic);
-		return new CraftingGridInvMenuGraphic($this->grid_width, $inner);
+		return $inner instanceof PositionedInvMenuGraphic ? new CraftingGridInvMenuGraphic($this->grid_width, $inner) : null;
 	}
 
 	public function createInventory() : Inventory{
