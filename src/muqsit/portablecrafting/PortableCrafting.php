@@ -8,7 +8,6 @@ use muqsit\invmenu\InvMenu;
 use muqsit\invmenu\InvMenuHandler;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\crafting\CraftingGrid;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 
@@ -25,7 +24,7 @@ final class PortableCrafting extends PluginBase{
 			InvMenuHandler::register($this);
 		}
 
-		InvMenuHandler::getTypeRegistry()->register(self::INV_MENU_TYPE_WORKBENCH, new CraftingGridInvMenuType(CraftingGrid::SIZE_BIG));
+		InvMenuHandler::getTypeRegistry()->register(self::INV_MENU_TYPE_WORKBENCH, new CraftingTableInvMenuType());
 	}
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
