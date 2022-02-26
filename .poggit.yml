@@ -5,7 +5,7 @@ branches:
 projects:
   PortableCrafting:
     path: ""
-    icon: poggit/icon.webp
+    icon: poggit/icon.png
     libs:
       - src: muqsit/InvMenu/InvMenu
         branch: "4.0"
