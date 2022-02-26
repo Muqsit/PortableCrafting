@@ -5,6 +5,8 @@ version: 0.1.0
 permissions:
   portablecrafting.command.workbench:
     default: true
+    description: Permits executing /workbench command
 commands:
   workbench:
     permission: portablecrafting.command.workbench
+    description: Opens a portable crafting table window
