@@ -6,6 +6,7 @@ namespace muqsit\portablecrafting;
 
 use muqsit\invmenu\InvMenu;
 use muqsit\invmenu\InvMenuHandler;
+use muqsit\portablecrafting\event\OpenWorkbenchPortableCraftingEvent;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
@@ -29,7 +30,10 @@ final class PortableCrafting extends PluginBase{
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 		if($sender instanceof Player){
-			self::WORKBENCH()->send($sender);
+			($ev = new OpenWorkbenchPortableCraftingEvent($sender))->call();
+			if(!$ev->isCancelled()){
+				self::WORKBENCH()->send($sender);
+			}
 		}
 		return true;
 	}
