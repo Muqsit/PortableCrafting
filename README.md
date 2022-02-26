@@ -4,6 +4,8 @@
 | --- | --- | --- |
 | `/workbench` | `portablecrafting.command.workbench` | everyone |
 
+[![](https://poggit.pmmp.io/shield.state/PortableCrafting)](https://poggit.pmmp.io/p/PortableCrafting)
+
 ## API
 ### Send crafting table window to a player
 ```php
