@@ -10,3 +10,4 @@ commands:
   workbench:
     permission: portablecrafting.command.workbench
     description: Opens a portable crafting table window
+    aliases: ["craft"]
