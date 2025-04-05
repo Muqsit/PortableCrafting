@@ -1,6 +1,6 @@
 name: PortableCrafting
 main: muqsit\portablecrafting\PortableCrafting
-api: 5.0.0
+api: 5.27.0
 version: 0.1.5
 permissions:
   portablecrafting.command.workbench:
