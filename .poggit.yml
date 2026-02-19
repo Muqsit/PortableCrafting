@@ -9,5 +9,5 @@ projects:
     libs:
       - src: muqsit/InvMenu/InvMenu
         branch: pm5
-        version: ^4.6.6
+        version: ^4.7.4
 ...
